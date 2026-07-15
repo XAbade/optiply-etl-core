@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "optiply-etl-core"
+version = "0.1.0"
+description = "Shared template logic for Optiply hotglue ETL flows (auth, snapshots, payloads, Optiply API request loops)"
+requires-python = ">=3.7"
+dependencies = [
+    "pandas",
+    "requests",
+    "backoff",
+    "pydantic",
+]
+
+[tool.setuptools.packages.find]
+include = ["optiply_etl*"]
